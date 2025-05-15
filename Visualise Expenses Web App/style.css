@@ -1,0 +1,143 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #4285f4;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#expense-input, #expense-visualisation, #expense-list {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#add-expense-form label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+#add-expense-form input, 
+#add-expense-form select {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#add-expense-form button {
+    background-color: #4285f4;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+#expenses-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#expenses-ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#expenses-ul li span {
+    flex: 1;
+}
+
+#expenses-ul li .category {
+    width: 100px;
+    text-align: center;
+    padding: 3px 6px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+}
+
+#expenses-ul li .category.food {
+    background-color: rgba(255, 99, 132, 0.8);
+}
+
+#expenses-ul li .category.transport {
+    background-color: rgba(54, 162, 235, 0.8);
+}
+
+#expenses-ul li .category.entertainment {
+    background-color: rgba(255, 206, 86, 0.8);
+}
+
+#expenses-ul li .category.other {
+    background-color: rgba(75, 192, 192, 0.8);
+}
+
+#expenses-ul li button {
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    color: #666;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #expense-input {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    #expense-visualisation {
+        flex: 2;
+        min-width: 400px;
+    }
+
+    #expense-list {
+        width: 100%;
+    }
+}

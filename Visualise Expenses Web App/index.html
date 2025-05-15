@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualise Expenses</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Visualise Your Expenses</h1>
+    </header>
+
+    <main>
+        <section id="expense-input">
+            <h2>Add New Expense</h2>
+            <form id="add-expense-form">
+                <label for="description">Description:</label>
+                <input type="text" id="description" required><br><br>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" required><br><br>
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="food">Food</option>
+                    <option value="transport">Transport</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+
+        <section id="expense-visualisation">
+            <h2>Expense Breakdown</h2>
+            <div class="chart-container">
+                <canvas id="expense-chart"></canvas>
+            </div>
+        </section>
+
+        <section id="expense-list">
+            <h2>Expense History</h2>
+            <ul id="expenses-ul"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dilers Expense Visualiser</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
